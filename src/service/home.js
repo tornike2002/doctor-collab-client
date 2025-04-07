@@ -27,3 +27,9 @@ export const apiGetServices = async () => {
   if (error) throw new Error(error.message);
   return data;
 };
+
+export const apiGetFooter = async () => {
+  let { data, error } = await supabase.from("footer").select("*");
+  if (error) throw new Error(error.message);
+  return data;
+};
