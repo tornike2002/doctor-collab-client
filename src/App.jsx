@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import MainLayout from "./components/MainLayout";
 
 import { HelmetProvider } from "react-helmet-async";
+import AboutMe from "./pages/AboutMe";
 
 const routes = [
   {
@@ -19,7 +20,10 @@ const routes = [
         <Outlet />
       </MainLayout>
     ),
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "About", element: <AboutMe /> },
+    ],
   },
 ];
 
