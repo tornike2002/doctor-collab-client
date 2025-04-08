@@ -33,3 +33,13 @@ export const apiGetFooter = async () => {
   if (error) throw new Error(error.message);
   return data;
 };
+
+export const getServicesId = async (id) => {
+  let { data, error } = await supabase
+    .from("services")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  return { service: data, error };
+};

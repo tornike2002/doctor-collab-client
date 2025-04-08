@@ -19,7 +19,10 @@ function CardGrid({ service, id }) {
         />
       </div>
 
-      <p className="text-xl font-medium text-lightBlue cursor-pointer overflow-hidden text-ellipsis max-w-full shadow-sm">
+      <p
+        onClick={navigateHandler}
+        className="text-xl font-medium text-lightBlue cursor-pointer overflow-hidden text-ellipsis max-w-full shadow-sm"
+      >
         {service.title}
       </p>
     </div>
