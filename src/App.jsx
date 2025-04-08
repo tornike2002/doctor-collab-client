@@ -14,6 +14,7 @@ import AboutMe from "./pages/AboutMe";
 import Blog from "./pages/Blog";
 import CardInformation from "./components/home/CardInformation/CardInformation";
 import BlogInformation from "./components/Blog/BlogInformation/BlogInformation";
+import BookingTop from "./components/booking/BookingTop";
 
 const routes = [
   {
@@ -29,6 +30,7 @@ const routes = [
       { path: "Blog", element: <Blog /> },
       { path: "servicies/:id", element: <CardInformation /> },
       { path: "blog/:id", element: <BlogInformation /> },
+      { path: "booking", element: <BookingTop /> },
     ],
   },
 ];
