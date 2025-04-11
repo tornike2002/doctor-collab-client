@@ -130,7 +130,7 @@ export default function BookinMain() {
         <div className="flex justify-center items-center ">
           <button
             type="submit"
-            className="w-full max-w-[400px] mt-[20px]   bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all"
+            className="w-full max-w-[400px] mt-[20px]   cursor-pointer bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all"
           >
             Book Appointment
           </button>
