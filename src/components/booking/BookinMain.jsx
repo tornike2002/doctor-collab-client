@@ -34,11 +34,7 @@ export default function BookinMain() {
     else if (!/^\d{9}$/.test(form.user_phone.value))
       errors.user_phone = "Phone must be 9 digits";
     if (!form.age.value) errors.age = "Age is required";
-    else if (
-      isNaN(form.age.value) ||
-      form.age.value < 1 ||
-      form.age.value > 100
-    )
+    else if (isNaN(form.age.value) || form.age.value < 1 || form.age.value > 30)
       errors.age = "Age must be between 1 and 120";
     if (!form.condition.value) errors.condition = "Condition is required";
 

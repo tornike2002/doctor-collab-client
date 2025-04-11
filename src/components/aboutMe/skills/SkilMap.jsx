@@ -31,7 +31,7 @@ export default function SkilMap({
                 {item.skil}
               </h2>
               <div className="flex gap-4">
-                <p className="font-openSans uppercase">{item.description}</p>
+                <p className="font-openSans ">{item.description}</p>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { useGetDaysOfWeek } from "../../hook/useGetDaysOfWeek";
 import { useState } from "react";
 import { useGetPatientsByDate } from "../../hook/useGetPatientsByDate";
 import TimeLOading from "./TimeLOading";
+import ErrorMessage from "../ErrorMessage";
 
 function AvailableTime({ formatDate, selectedDay, setTimeId }) {
   const {
@@ -39,8 +40,9 @@ function AvailableTime({ formatDate, selectedDay, setTimeId }) {
     setSelectedTimeSlot(id);
   };
 
-  if (patientsByDateLoading) return <TimeLOading />;
-  if (patientsByDateError) return <p>Error loading time slots</p>;
+  if (patientsByDateLoading || weekLoading) return <TimeLOading />;
+  if (patientsByDateError || weekIsError)
+    return <ErrorMessage errorMessage={error.message} />;
 
   return (
     <div>
