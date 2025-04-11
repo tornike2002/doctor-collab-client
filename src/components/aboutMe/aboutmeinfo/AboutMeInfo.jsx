@@ -12,7 +12,7 @@ export default function AboutMeInfo() {
     <div className="">
       {data.map((dataHero) => (
         <div key={dataHero.id}>
-          <h1 className="text-[42px] md:text-[52px] lg:text-[64px] font-poppinsBold  text-veryDark mt-[50px] text-center">
+          <h1 className="text-[42px] font-bold md:text-[52px] lg:text-[64px] font-poppinsBold  text-veryDark mt-[50px] text-center">
             {dataHero.title}
           </h1>
           <AboutMeImg text={dataHero.text} dataHeroImg={dataHero.img} />

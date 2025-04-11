@@ -1,25 +1,21 @@
-@import "tailwindcss";
-
-body {
-  background-color: #59749a;
-}
-
 /* Custom calendar styles */
 .react-calendar {
   width: 100%;
-  background-color: white;
-  border: none;
-  font-family: "Inter", sans-serif;
-  line-height: 1.5;
-}
-
-.react-calendar__tile {
-  padding: 12px 6px;
+  max-width: 500px;
+  max-height: 390px;
+  background-color: #cce7ff;
   border-radius: 10px;
-  transition: 0.2s all;
-  font-weight: 500;
+  padding: 10px 20px 50px 20px;
+  border: none;
+  font-size: 20px;
 }
 
+.react-calendar .react-calendar__tile {
+  row-gap: 20px;
+  background-color: #cce7ff;
+
+  transition: 0.3s;
+}
 .react-calendar__tile:enabled:hover {
   background-color: #e0f2fe; /* Tailwind blue-100 */
   color: #1d4ed8; /* Tailwind blue-700 */
