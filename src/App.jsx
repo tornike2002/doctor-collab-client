@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 
 import MainLayout from "./components/MainLayout";
 
-import { HelmetProvider } from "react-helmet-async";
 import AboutMe from "./pages/AboutMe";
 import Blog from "./pages/Blog";
 import CardInformation from "./components/home/CardInformation/CardInformation";
@@ -38,19 +37,17 @@ const routes = [
 
 function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <Routes>
-          {routes.map((route, index) => (
-            <Route key={index} path={route.path} element={route.element}>
-              {route.children?.map((child, idx) => (
-                <Route key={idx} path={child.path} element={child.element} />
-              ))}
-            </Route>
-          ))}
-        </Routes>
-      </Router>
-    </HelmetProvider>
+    <Router>
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element}>
+            {route.children?.map((child, idx) => (
+              <Route key={idx} path={child.path} element={child.element} />
+            ))}
+          </Route>
+        ))}
+      </Routes>
+    </Router>
   );
 }
 
